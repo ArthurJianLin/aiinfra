@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "gpu": "NVIDIA A10-24Q (24GB)",
+  "gpu_mem_util": 0.25,
+  "max_model_len": 4096,
+  "dtype": "bfloat16",
+  "cudagraph": "on (default)",
+  "prompt_tokens_warmup": 1184,
+  "prompt_tokens_prefill_only": 1184,
+  "prompt_tokens_prefill_decode": 1184,
+  "t_prefill_plus1_ms": 24.61,
+  "t_prefill_decode_ms": 499.83,
+  "decode_tokens": 128,
+  "decode_ms_per_token": 3.713,
+  "decode_tok_per_s": 269.3
+}

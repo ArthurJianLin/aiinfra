@@ -1,0 +1,105 @@
+{
+  "prefill": {
+    "n_kernels": 529,
+    "span_ms": 22.814,
+    "busy_ms": 19.938,
+    "busy_pct": 87.4,
+    "top_kernels": [
+      {
+        "name": "void cutlass::Kernel<cutlass_80_tensorop_bf16_s16816gemm_bf16_256x128_32x3_tn_al",
+        "total_us": 8144.6,
+        "count": 48
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_80_tensorop_bf16_s16816gemm_bf16_128x256_32x3_tn_al",
+        "total_us": 2818.3,
+        "count": 24
+      },
+      {
+        "name": "void vllm::act_and_mul_kernel<c10::BFloat16, &(c10::BFloat16 vllm::silu_kernel<c",
+        "total_us": 1838.6,
+        "count": 48
+      },
+      {
+        "name": "void flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, fal",
+        "total_us": 1644.7,
+        "count": 24
+      },
+      {
+        "name": "std::enable_if<(((8)>(0)))&&vllm::_typeConvert<c10::BFloat16>::exists, void>::ty",
+        "total_us": 1123.1,
+        "count": 96
+      },
+      {
+        "name": "void gemv2T_kernel_val<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, fl",
+        "total_us": 961.7,
+        "count": 2
+      },
+      {
+        "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, __nv_bflo",
+        "total_us": 834.6,
+        "count": 72
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_",
+        "total_us": 832.9,
+        "count": 24
+      }
+    ]
+  },
+  "decode": {
+    "n_kernels": 35584,
+    "span_ms": 535.357,
+    "busy_ms": 378.691,
+    "busy_pct": 70.7,
+    "top_kernels": [
+      {
+        "name": "std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int, __nv_bflo",
+        "total_us": 111158.9,
+        "count": 9216
+      },
+      {
+        "name": "void cutlass::Kernel<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_",
+        "total_us": 107644.3,
+        "count": 3072
+      },
+      {
+        "name": "void gemv2T_kernel_val<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, fl",
+        "total_us": 60742.8,
+        "count": 128
+      },
+      {
+        "name": "void flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, fal",
+        "total_us": 25822.2,
+        "count": 3072
+      },
+      {
+        "name": "void flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256",
+        "total_us": 17506.6,
+        "count": 3072
+      },
+      {
+        "name": "std::enable_if<(((8)>(0)))&&vllm::_typeConvert<c10::BFloat16>::exists, void>::ty",
+        "total_us": 15490.9,
+        "count": 6144
+      },
+      {
+        "name": "void vllm::act_and_mul_kernel<c10::BFloat16, &(c10::BFloat16 vllm::silu_kernel<c",
+        "total_us": 10678.5,
+        "count": 3072
+      },
+      {
+        "name": "void vllm::rotary_embedding_kernel<c10::BFloat16, true>(long const*, c10::BFloat",
+        "total_us": 7440.4,
+        "count": 3072
+      }
+    ]
+  },
+  "decode_steps": {
+    "n_detected": 149,
+    "kernels_per_step_median": 278,
+    "median_step_interval_ms": 3.929,
+    "per_step_kernel_busy_us": 2870.5
+  },
+  "n_memcpy_events": 3342
+}

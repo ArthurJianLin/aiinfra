@@ -1,0 +1,18 @@
+# 大文件不入库
+*.run
+*.tar.gz
+*.deb
+*.rpm
+
+# chrome trace 解压版（入库的是 .gz）
+profile-*/results/vllm_chrome.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
