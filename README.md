@@ -1,4 +1,4 @@
-# AI Infra 实验资产（aiinfra）
+# AI Infra 实验
 
 个人 AI Infra 学习主线（L5 推理优化 + L2/L3 系统底座）的实验资产目录：vLLM 部署运维 + GPU 推理 profiling。所有实验在真实 vGPU 环境上完成并验证。
 
@@ -80,10 +80,3 @@ cd scripts && python analyze_chrome.py    # → figC/figD/figE
 
 数字参考（1184-token prompt，bf16，cudagraph on）：prefill 单步 19.1 ms / 529 kernel；decode 每步中位 3.61 ms / 278 kernel，单流 ~270 tok/s。
 
-## 上传 GitHub 须知
-
-- `.gitignore` 已排除 `*.run`（446MB 安装包）、`__pycache__`、chrome trace 解压版（46MB）；入库体积约 4MB。
-- 大体积 `vllm_chrome.json.gz`（2.1MB）已包含在 `results/`，如未来仓库超限可移至 LFS 或删除（`analyze_chrome_summary.json` 保留了关键统计）。
-- 报告为自包含 HTML（图 base64 内嵌），浏览器直接打开。
-
-> AI生成
